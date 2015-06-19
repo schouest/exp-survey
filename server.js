@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
 var app = express();
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 // static content (disabled)
@@ -19,10 +19,8 @@ app.get('/', function(req, res) {
 
 app.post('/result', function(req, res) {
  console.log("POST DATA", req.body);
- res.render('results');
+ res.render('results', req.body);
 })
-
-
 
 app.listen(8000, function() {
  console.log("listening on port 8000");
