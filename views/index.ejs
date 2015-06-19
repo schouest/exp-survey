@@ -15,7 +15,7 @@
     <h2>Insert Info Here</h2>
     <form method='post' action='/result'>
     	<label>Operating System: </label><label><input type='radio' name='os' value='OSX'>OSX</label><label><input type='radio' name='os' value='Windows'>Windows</label><label><input type='radio' name='os' value='iOS'>iOS</label><label><input type='radio' name='os' value='Android'>Android</label>
-    		<label><input type='radio' name='os' value=''>other:<input type='text' name='other_os'/></label><br>
+    		<label><input type='radio' name='os' value='' checked='checked'>other:<input type='text' name='other_os'/></label><br>
     	
     	<label>Web Browser: <select name='browser'>
     		<option value="Internet Explorer">Internet Explorer</option>
@@ -25,7 +25,7 @@
     		<option value="Opera">Opera</option>
     		<option value="Other">Other</option>
     	  	</select></label><br>
-    	<label>Favorite Language: <input type='text' name='favlang'></label><br>
+    	<label>Favorite Language: <input type='text' name='favlang' required></label><br>
     	<label>Comments: <textarea name='comment' cols='90' rows='7'></textarea></label><br>
     	<button type='submit' value='submit'>Submit</button>
     </form>
